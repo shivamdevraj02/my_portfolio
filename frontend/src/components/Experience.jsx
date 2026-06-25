@@ -16,8 +16,8 @@ export default function Experience({ dark }) {
     <section id="experience" className={`py-24 px-4 ${dark ? "bg-[#0a0e17]" : "bg-gray-50"}`}>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-5 h-px bg-blue-400" />
-          <span className="mono text-xs text-blue-400 tracking-widest uppercase">Experience</span>
+        
+          <span className="mono text-xs text-blue-400 tracking-widest uppercase"> Experience</span>
         </div>
         <h2 className={`text-3xl sm:text-4xl font-bold tracking-tight mb-1 ${dark ? "text-white" : "text-gray-900"}`}>
           Where I've Contributed

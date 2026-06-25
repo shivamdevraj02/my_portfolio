@@ -20,7 +20,7 @@ export default function About({ dark }) {
     <section id="about" className={`py-24 px-4 ${dark ? "bg-[#0a0e17]" : "bg-gray-50"}`}>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-5 h-px bg-blue-400" />
+      
           <span className="mono text-xs text-blue-400 tracking-widest uppercase">About</span>
         </div>
         <h2 className={`text-3xl sm:text-4xl font-bold tracking-tight mb-1 ${dark ? "text-white" : "text-gray-900"}`}>
@@ -55,7 +55,7 @@ export default function About({ dark }) {
 
           {/* Right: journey */}
           <div className={`rounded-xl border p-6 ${dark ? "bg-[#0f1521] border-white/5" : "bg-white border-gray-100 shadow-sm"}`}>
-            <p className="mono text-xs text-purple-400 tracking-widest uppercase mb-5">// My Journey</p>
+            <p className="mono text-xs text-purple-400 tracking-widest uppercase mb-5">My Journey</p>
             {journey.map((j, i) => (
               <div key={i} className="flex gap-3 mb-5 last:mb-0">
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-base flex-shrink-0 mt-0.5

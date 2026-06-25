@@ -1,7 +1,7 @@
 // ✏️ EDIT HERE — apni skills aur levels update kar
 const skillCategories = [
   {
-    label: "// Frontend",
+    label: " Frontend",
     skills: [
       { name: "HTML & CSS", level: 90 },
       { name: "Tailwind CSS", level: 82 },
@@ -11,7 +11,7 @@ const skillCategories = [
     ],
   },
   {
-    label: "// Backend",
+    label: " Backend",
     skills: [
       { name: "Node.js", level: 80 },
       { name: "Express.js", level: 80 },
@@ -20,7 +20,7 @@ const skillCategories = [
     ],
   },
   {
-    label: "// AI / ML",
+    label: " AI / ML",
     learning: true,
     skills: [
       { name: "Python", level: 35 },
@@ -36,7 +36,7 @@ export default function Skills({ dark }) {
     <section id="skills" className={`py-24 px-4 ${dark ? "bg-[#0f1521]" : "bg-white"}`}>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-5 h-px bg-blue-400" />
+          {/* <div className="w-5 h-px bg-blue-400" /> */}
           <span className="mono text-xs text-blue-400 tracking-widest uppercase">Skills</span>
         </div>
         <h2 className={`text-3xl sm:text-4xl font-bold tracking-tight mb-1 ${dark ? "text-white" : "text-gray-900"}`}>

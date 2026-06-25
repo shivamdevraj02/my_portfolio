@@ -17,7 +17,7 @@ export default function DSA({ dark }) {
     <section id="dsa" className={`py-24 px-4 ${dark ? "bg-[#0a0e17]" : "bg-gray-50"}`}>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-5 h-px bg-blue-400" />
+        
           <span className="mono text-xs text-blue-400 tracking-widest uppercase">DSA</span>
         </div>
         <h2 className={`text-3xl sm:text-4xl font-bold tracking-tight mb-1 ${dark ? "text-white" : "text-gray-900"}`}>
@@ -38,7 +38,7 @@ export default function DSA({ dark }) {
 
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-5 h-px bg-blue-400" />
+         
             <span className="mono text-xs text-blue-400 tracking-widest uppercase">Topics Covered</span>
           </div>
           <div className="flex flex-wrap gap-2">

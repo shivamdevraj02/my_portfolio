@@ -27,7 +27,7 @@ export default function Hero({ dark }) {
 
           {/* Title */}
           <p className="mono text-base sm:text-lg text-gray-400 mb-6">
-            Backend Engineer <span className="text-purple-400 mx-2">→</span> AI / ML Engineer
+           AI ML Engineer <span className="text-purple-400 mx-2"></span>
           </p>
 
           {/* Bio */}

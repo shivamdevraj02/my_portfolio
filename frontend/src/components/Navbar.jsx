@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const links = ["About", "Skills", "Experience", "Projects", "Why Hire me", "Workflows", "DSA", "Contact"];
 
-export default function Navbar({ dark, setDark }) {
+export default function Navbar({ dark = false, setDark }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,7 +27,7 @@ export default function Navbar({ dark, setDark }) {
         {/* Logo */}
         <a href="#hero" onClick={() => scrollTo("hero")}
           className="mono text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">
-          Welcome, <span className="text-purple-400">Recruiter</span>
+          Welcome <span className="text-purple-400">you</span>
         </a>
 
         {/* Desktop Links */}
@@ -48,8 +48,7 @@ export default function Navbar({ dark, setDark }) {
           <button onClick={() => setDark(!dark)}
             className={`mono text-xs px-3 py-1.5 rounded-full border transition-all
               ${dark
-                ? "border-white/10 text-gray-300 hover:border-blue-400 hover:text-blue-400"
-                : "border-black/10 text-gray-600 hover:border-blue-500 hover:text-blue-500"}`}>
+                ? "border-white/10 text-gray-300 hover:border-blue-400 hover:text-blue-400" : "border-black/10 text-gray-600 hover:border-blue-500 hover:text-blue-500"}`}>
             {dark ? "☀️ Light" : "🌙 Dark"}
           </button>
 
