@@ -1,39 +1,45 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const router = require('./routes/mainroutes');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const path = require("path");
+
+const router = require("./routes/mainroutes");
 
 dotenv.config();
 
-const PORT = process.env.PORT || 30001;
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://shivamdevraj02:Devraj@airbnb.emxj8xf.mongodb.net/contact?retryWrites=true&w=majority";
-
 const app = express();
+
+const PORT = process.env.PORT || 30001;
+const MONGO_URI = process.env.MONGO_URI;
+
+if (!MONGO_URI) {
+  console.error("MONGO_URI is missing");
+  process.exit(1);
+}
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Database connection
+// MongoDB
 mongoose
   .connect(MONGO_URI)
-  .then(() => {
-    console.log("MongoDB Connected");
-  })
-  .catch((err) => {
-    console.log("MongoDB connection error:", err);
-  });
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log("MongoDB connection error:", err));
 
-// Routes
-app.use('/', router);
+// API
+app.use("/api", router);
 
-// 404 handler
-app.use((req, res) => {
-    res.status(404).json({ error: 'Not found' });
+// React Static Files
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+// React Routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
 });
 
-// Start server
+// Start Server
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
