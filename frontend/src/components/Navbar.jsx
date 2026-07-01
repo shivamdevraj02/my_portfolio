@@ -58,7 +58,7 @@ export default function Navbar({ dark = false, setDark }) {
             className={`mono text-xs px-3 py-1.5 rounded-full border transition-all
               ${dark
                 ? "border-white/10 text-gray-300 hover:border-purple-400 hover:text-purple-400" : "border-black/10 text-gray-600 hover:border-purple-500 hover:text-purple-500"}`}>
-            ⬇ Resume
+            Resume
           </button>
 
           {/* Theme Toggle */}
