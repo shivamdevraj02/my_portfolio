@@ -1,6 +1,6 @@
 const stats = [
-  { num: "2+", label: "Projects shipped" },
-  { num: "1", label: "Hackathon built" },
+  { num: "4+", label: "Projects shipped" },
+  { num: "2+", label: "Hackathon built" },
   { num: "10mo", label: "T&P Coordinator" },
   { num: "AI/ML", label: "Current focus" },
 ];
