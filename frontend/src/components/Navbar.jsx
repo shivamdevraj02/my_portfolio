@@ -18,6 +18,15 @@ export default function Navbar({ dark = false, setDark }) {
     setMenuOpen(false);
   };
 
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Shivam_Devraj_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
       ${scrolled ? (dark ? "bg-[#0a0e17]/90 shadow-lg" : "bg-white/90 shadow-md") : "bg-transparent"}
@@ -44,6 +53,14 @@ export default function Navbar({ dark = false, setDark }) {
         </ul>
 
         <div className="flex items-center gap-3">
+          {/* Resume Download */}
+          <button onClick={downloadResume}
+            className={`mono text-xs px-3 py-1.5 rounded-full border transition-all
+              ${dark
+                ? "border-white/10 text-gray-300 hover:border-purple-400 hover:text-purple-400" : "border-black/10 text-gray-600 hover:border-purple-500 hover:text-purple-500"}`}>
+            ⬇ Resume
+          </button>
+
           {/* Theme Toggle */}
           <button onClick={() => setDark(!dark)}
             className={`mono text-xs px-3 py-1.5 rounded-full border transition-all
