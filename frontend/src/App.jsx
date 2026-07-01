@@ -5,7 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
-import WhyHire from "./components/WhyHire";
+
 import Workflows from "./components/Workflows";
 import DSA from "./components/DSA";
 import Contact from "./components/Contact";
@@ -23,7 +23,7 @@ export default function App() {
         <Skills dark={dark} />
         <Experience dark={dark} />
         <Projects dark={dark} />
-        <WhyHire dark={dark} />
+     
         <Workflows dark={dark} />
         <DSA dark={dark} />
         <Contact dark={dark} />
