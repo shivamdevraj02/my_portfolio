@@ -1,6 +1,6 @@
 // ✏️ EDIT HERE — apne DSA stats aur topics update karo
 const stats = [
-  { num: "130+", label: "Problems solved" },
+  { num: "400+", label: "Problems solved" },
   { num: "cpp & JS", label: "Primary language" },
   { num: "Python", label: "Learning for ML" },
   { num: "Active", label: "Practice status" },
