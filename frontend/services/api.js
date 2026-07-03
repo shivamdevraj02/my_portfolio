@@ -47,6 +47,27 @@ export const getProjects = async () => {
   }
 };
 
+export const sendChatMessage = async (message) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/chat`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send chat message");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Chat message error:", error);
+    throw error;
+  }
+};
+
 export const checkBackendHealth = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/api`);

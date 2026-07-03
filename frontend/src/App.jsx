@@ -10,6 +10,7 @@ import Workflows from "./components/Workflows";
 import DSA from "./components/DSA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 
 export default function App() {
   const [dark, setDark] = useState(false);
@@ -23,11 +24,12 @@ export default function App() {
         <Skills dark={dark} />
         <Experience dark={dark} />
         <Projects dark={dark} />
-     
+
         <Workflows dark={dark} />
         <DSA dark={dark} />
         <Contact dark={dark} />
         <Footer dark={dark} />
+        <Chatbot dark={dark} />
       </div>
     </div>
   );

@@ -95,4 +95,36 @@ exports.getProjects = (req, res) => {
     res.json(projects);
 };
 
+exports.chatbotResponse = async (req, res) => {
+    try {
+        const { message } = req.body;
+
+        if (!message || typeof message !== 'string') {
+            return res.status(400).json({ error: 'Message is required' });
+        }
+
+        const normalized = message.trim().toLowerCase();
+        let responseText = "I'm here to help! Ask me about my projects, skills, AI/ML focus, or how to get in touch.";
+
+        if (normalized.includes('project')) {
+            responseText = "I have built a full-stack e-commerce platform and a hackathon project called PrepMate. Both use Node.js, Express, MongoDB, and React.";
+        } else if (normalized.includes('skill') || normalized.includes('technology') || normalized.includes('stack')) {
+            responseText = "My current strengths are backend development with Node.js, Express, MongoDB, and frontend development with React and Tailwind. I'm also learning AI/ML fundamentals with Python, NumPy, and Pandas.";
+        } else if (normalized.includes('contact') || normalized.includes('email') || normalized.includes('linkedin')) {
+            responseText = "You can reach me at devrajshivam02@gmail.com, connect on GitHub at github.com/shivamdevraj02, or visit linkedin.com/in/shivam-devraj.";
+        } else if (normalized.includes('ai') || normalized.includes('ml') || normalized.includes('machine learning')) {
+            responseText = "I am transitioning into AI/ML engineering, focusing on combining backend systems with data science and machine learning fundamentals.";
+        } else if (normalized.includes('hello') || normalized.includes('hi') || normalized.includes('hey')) {
+            responseText = "Hello! I'm the portfolio assistant. Ask me about projects, skills, contact info, or AI/ML work.";
+        } else if (normalized.includes('portfolio') || normalized.includes('site')) {
+            responseText = "This portfolio showcases my skills in full-stack development, backend APIs, and my path toward AI/ML engineering.";
+        }
+
+        res.json({ success: true, response: responseText });
+    } catch (error) {
+        console.error('Chatbot response error:', error);
+        res.status(500).json({ error: 'Failed to generate chat response' });
+    }
+};
+
 module.exports = exports;

@@ -14,4 +14,7 @@ router.get('/skills', mainController.getSkills);
 // Projects endpoint
 router.get('/projects', mainController.getProjects);
 
+// Chatbot endpoint
+router.post('/chat', mainController.chatbotResponse);
+
 module.exports = router;
