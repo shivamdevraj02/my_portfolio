@@ -10,7 +10,6 @@ export default function Hero({ dark }) {
 
       {/* Background glow */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-10 bg-blue-400 pointer-events-none" />
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full blur-3xl opacity-8 bg-purple-500 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10 grid lg:grid-cols-2 gap-10 items-center">
         {/* Left side - Content */}
@@ -27,7 +26,7 @@ export default function Hero({ dark }) {
 
           {/* Title */}
           <p className="mono text-base sm:text-lg text-gray-400 mb-6">
-           AI ML Engineer <span className="text-purple-400 mx-2"></span>
+            AI ML Engineer <span className="text-purple-400 mx-2"></span>
           </p>
 
           {/* Bio */}
@@ -55,9 +54,6 @@ export default function Hero({ dark }) {
 
         {/* Right side - Profile Image */}
         <div className="flex justify-center">
-          {/* Purple background circle */}
-          <div className="absolute w-96 h-96 rounded-full bg-gradient-to-br from-purple-500/40 to-blue-500/20 blur-3xl" />
-
           <div className={`relative w-96 h-96 rounded-full overflow-hidden border-2 
             ${dark ? "border-blue-400/30" : "border-blue-400/20"}
             shadow-2xl hover:shadow-blue-400/20 transition-all duration-300`}>
